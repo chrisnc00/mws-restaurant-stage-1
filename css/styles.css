@@ -48,19 +48,27 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   text-align: center;
   text-transform: uppercase;
 }
+
+/* New below here */
+
+
+
 /* ====================== Navigation ====================== */
 nav {
   width: 100%;
   height: 80px;
   background-color: #252831;
   text-align:center;
+  /* New stuff below */
+  /* vertical align the title */
+  display: flex;
 }
 nav h1 {
   margin: auto;
 }
 nav h1 a {
   color: #fff;
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: 200;
   letter-spacing: 10px;
   text-transform: uppercase;
@@ -100,7 +108,7 @@ nav h1 a {
 /* ====================== Map ====================== */
 #map {
   height: 400px;
-  width: 100%;
+  max-width: 100%; 
   background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
@@ -109,6 +117,7 @@ nav h1 a {
   height: 50px;
   background-color: #3397DB;
   align-items: center;
+  display: flex;
 }
 .filter-options h2 {
   color: white;
@@ -136,6 +145,9 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  /* show items in flexbox and have them wrap instead of resize */
+  display: flex;
+  flex-wrap: wrap;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -272,4 +284,21 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* ====================== Media Queries ====================== */
+@media screen and (max-width: 500px) {
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+
+}
+
+@media screen and (min-width: 1000px) {
+
 }
